@@ -76,6 +76,19 @@ nav a:hover {
     width: 50%;
 }
 
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main p {
+    max-width: 700px;
+    margin: 0 auto 1.2em auto;
+    text-align: left;
+}
+
 /* Mobile adjustments */
 @media (max-width: 700px) {
     header {
