@@ -76,14 +76,13 @@ nav a:hover {
     width: 50%;
 }
 
-/* Universal text layout for all pages */
-body > *:not(header) {
+.intro {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-body p {
+.intro p {
     max-width: 700px;
     margin: 0 auto 1.2em auto;
     text-align: left;
