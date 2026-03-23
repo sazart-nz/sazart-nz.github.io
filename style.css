@@ -1,3 +1,4 @@
+/* Base typography and page background */
 body {
     font-family: "Georgia", "Garamond", "Times New Roman", serif;
     font-size: 18px;
@@ -8,29 +9,52 @@ body {
     padding: 0;
 }
 
+/* Header */
 header {
-  background: #111;
-  color: white;
-  padding: 20px;
-  text-align: center;
+    background: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 nav a {
-  color: #ddd;
-  margin: 0 10px;
-  text-decoration: none;
+    color: #ddd;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
 nav a:hover {
-  color: white;
+    color: white;
 }
 
+/* Intro section under page heading */
 .intro {
-  max-width: 700px;
-  margin: 40px auto;
-  text-align: center;
+    max-width: 700px;
+    margin: 20px auto 30px auto;
+    text-align: center;
+    padding: 0;
 }
 
+/* Remove global padding that was breaking layout */
+main, section, header, footer {
+    padding: 0;
+}
+
+/* Gallery grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Optional image styling for other pages */
 .gallery img {
     border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -41,50 +65,43 @@ nav a:hover {
     transform: scale(1.03);
 }
 
-main, section, header, footer {
-    padding: 40px 60px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 40px;
-}
-
-.grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
+/* Project layout (About page) */
 .project {
-  max-width: 900px;
-  margin: 40px auto;
-  display: flex;
-  gap: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
 }
 
 .project img {
-  width: 50%;
-  border-radius: 4px;
+    width: 50%;
+    border-radius: 4px;
 }
 
 .details {
-  width: 50%;
+    width: 50%;
 }
 
+/* Mobile adjustments */
 @media (max-width: 700px) {
-    main, section, header, footer {
+    header {
+        padding: 20px;
+    }
+
+    .grid {
         padding: 20px;
     }
 
     body {
         font-size: 17px;
     }
-}
 
-.intro {
-  padding-top: 0;
-  padding-bottom: 20px;
+    .project {
+        flex-direction: column;
+    }
+
+    .project img,
+    .details {
+        width: 100%;
+    }
 }
