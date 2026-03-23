@@ -89,6 +89,10 @@ nav a:hover {
     text-align: left;
 }
 
+body {
+    background-color: #ffdddd;
+}
+
 /* Mobile adjustments */
 @media (max-width: 700px) {
     header {
