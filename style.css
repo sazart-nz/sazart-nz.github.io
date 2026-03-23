@@ -28,11 +28,12 @@ nav a:hover {
     color: white;
 }
 
-main, .intro, .content {
+body > *:not(header) {
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
 }
+
 
 /* Gallery grid */
 .grid {
