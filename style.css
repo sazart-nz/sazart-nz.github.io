@@ -116,3 +116,78 @@ section.grid {
         width: 100%;
     }
 }
+
+/* Featured artwork on homepage */
+.featured-art {
+    max-width: 600px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+.featured-art img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 65vh;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.featured-art p {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+/* Lightbox for viewing artwork */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.lightbox-content {
+    text-align: center;
+}
+
+.lightbox-title {
+    color: white;
+    margin: 10px 0 0;
+    font-size: 18px;
+}
+
+nav a.active {
+    color: white;
+    border-bottom: 1px solid white;
+}
