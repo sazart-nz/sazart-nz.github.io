@@ -13,15 +13,8 @@ body {
 header {
     background: #111;
     color: white;
-    padding: 22px 20px 18px;
+    padding: 15px 20px;
     text-align: center;
-}
-
-header h1 {
-    margin: 0 0 10px;
-    font-size: 2.1rem;
-    font-weight: normal;
-    letter-spacing: 1px;
 }
 
 /* Navigation */
@@ -35,17 +28,6 @@ nav a:hover {
     color: white;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px 18px;
-}
-
-nav a {
-    margin: 0;
-    padding: 4px 2px;
-}
 
 /* Centre the section heading inside text blocks */
 .page-text h2 {
@@ -67,11 +49,9 @@ section.grid {
 }
 
 .grid img {
-    .grid img {
     width: 100%;
-    height: 260px;
-    object-fit: contain;
-    background: #f0ece8;    /* tidy cropping */
+    height: 220px;        /* uniform tile height */
+    object-fit: cover;    /* tidy cropping */
     display: block;
     border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -80,18 +60,6 @@ section.grid {
 
 .grid img:hover {
     transform: scale(1.03);
-}
-    /* Artwork captions */
-.grid p {
-    text-align: center;
-    margin: 10px 0 4px;
-    font-size: 16px;
-    color: #555;
-}
-
-/* Each artwork tile */
-.grid > div {
-    text-align: center;
 }
 
 /* Project layout (if used on other pages) */
