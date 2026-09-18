@@ -26,6 +26,8 @@ nav a {
 
 nav a:hover {
     color: white;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 
