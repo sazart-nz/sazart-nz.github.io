@@ -28,6 +28,10 @@ nav a:hover {
     color: white;
 }
 
+nav a.active {
+    color: white;
+    border-bottom: 1px solid white;
+}
 
 /* Centre the section heading inside text blocks */
 .page-text h2 {
@@ -35,23 +39,32 @@ nav a:hover {
     margin-top: 0;
 }
 
-/* Gallery grid */
+/* Gallery layout */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
     padding: 0;
     max-width: 900px;
     margin: 0 auto;
 }
+
+.grid > div {
+    break-inside: avoid;
+    margin-bottom: 20px;
+}
+
+.grid > div p {
+    margin: 8px 0 0 0;
+}
+
 section.grid {
     padding: 10px 40px 40px 40px;
 }
 
 .grid img {
     width: 100%;
-    height: 220px;        /* uniform tile height */
-    object-fit: cover;    /* tidy cropping */
+    height: auto;
+    object-fit: contain;
     display: block;
     border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -92,6 +105,12 @@ section.grid {
     text-align: left;
 }
 
+/* Tablet and smaller desktop adjustments */
+@media (max-width: 950px) {
+    .grid {
+        column-count: 2;
+    }
+}
 
 /* Mobile adjustments */
 @media (max-width: 700px) {
@@ -100,6 +119,7 @@ section.grid {
     }
 
     .grid {
+        column-count: 1;
         padding: 20px;
     }
 
@@ -185,9 +205,4 @@ section.grid {
     color: white;
     margin: 10px 0 0;
     font-size: 18px;
-}
-
-nav a.active {
-    color: white;
-    border-bottom: 1px solid white;
 }
